@@ -44,7 +44,8 @@ main {
 
 .navber-title>h2,
 .feature-title,
-.fact>h2 {
+.fact>h2,
+.sponser-container>h2 {
     font-weight: 700;
     font-size: 2em;
     color: var(--primary-color);
@@ -52,7 +53,8 @@ main {
 
 .banner-bottom>img,
 .quick-list-image-item>img,
-.feature-image>img {
+.feature-image>img,
+.sponser-logo-item>img {
     width: 100%;
 }
 
@@ -228,7 +230,7 @@ header {
 .fact-container{
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+    margin: 100px 0;
 }
 
 .fact-item{
@@ -257,14 +259,37 @@ header {
     color: var(--tertiary-color);
 }
 
-
-
-
-
-
 /*===== fact area ends  =====*/
 
+/*===== sponser area starts  =====*/
+.sponser{
+    margin-bottom: 130px;
+}
+.sponser-container{
+    text-align: center;
+}
+.sponser-container>p{
+    color: var(--tertiary-color);
+    width: 543px;
+    margin: 20px auto;
+}
 
+.sponser-logo-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 50px;
+    gap: 55px;
+}
+
+.sponser-logo-item{
+    width: 150px;
+    height: 50px;
+    filter: grayscale(1);
+}
+
+
+
+/*===== sponser area ends  =====*/
 
 /*===== responsive for mobile device =====*/
 
@@ -272,7 +297,8 @@ header {
 
     .container,
     .banner-detail,
-    .quick-list-image-item {
+    .quick-list-image-item,
+    .sponser-container>p {
         width: 100%;
     }
 
@@ -285,7 +311,7 @@ header {
         gap: 40px;
     }
 
-    .quick-list-image {
+    .quick-list-image, .sponser-logo-container {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -314,5 +340,10 @@ header {
     .fact-item:hover{
         transform: none;
     }
-
+    .sponser-container{
+        padding: 20px;
+    }
+    .sponser-logo-container{
+        justify-items: center;
+    }
 }
