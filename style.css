@@ -23,7 +23,8 @@ a {
 }
 
 header,
-main {
+main, 
+footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -286,10 +287,17 @@ header {
     height: 50px;
     filter: grayscale(1);
 }
-
-
-
 /*===== sponser area ends  =====*/
+
+/*===== footer area starts  =====*/
+footer{
+    background-color: #FFF4E7;
+    margin: 0 auto;
+    padding: 40px;
+    font-size: 1.2em;
+    color: var(--secondary-color);
+}
+/*===== footer area ends  =====*/
 
 /*===== responsive for mobile device =====*/
 
