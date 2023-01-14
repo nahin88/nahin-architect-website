@@ -22,7 +22,8 @@ a {
     text-decoration: none;
 }
 
-header, main {
+header,
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,7 +34,7 @@ header, main {
     width: 992px;
 }
 
-.button a{
+.button a {
     display: inline-block;
     color: white;
     padding: 20px 25px;
@@ -41,10 +42,22 @@ header, main {
     border-radius: 8px;
 }
 
+.navber-title>h2,
+.feature-title {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.banner-bottom>img,
+.quick-list-image-item>img,
+.feature-image>img {
+    width: 100%;
+}
+
 /*============== common styles ends ===============*/
 
 /*===== header area starts  =====*/
-header{
+header {
     background-color: #fff4e7;
 }
 
@@ -55,51 +68,43 @@ header{
     align-items: center;
 }
 
-.navber-title>h2 {
-    font-weight: 700;
-    font-size: 2em;
-}
-
 .navber-items ul {
     display: flex;
     gap: 60px;
     list-style: none;
 }
 
-.navber-items ul li a{
+.navber-items ul li a {
     color: var(--secondary-color);
     font-size: 18px;
 }
 
-.banner-top{
+.banner-top {
     text-align: center;
     width: 75%;
     margin: 80px auto auto auto;
 }
 
-.banner-title{
+.banner-title {
     font-weight: 700;
     font-size: 3em;
 }
 
-.banner-detail{
+.banner-detail {
     color: var(--tertiary-color);
     margin: 30px 0;
     width: 868px;
 }
 
-.banner-bottom{
+.banner-bottom {
     margin: 50px 0;
 }
 
-.banner-bottom>img, .quick-list-image-item>img{
-    width: 100%;
-}
 
 /*===== header area ends  =====*/
 
 /*===== quick list area starts  =====*/
-.quick-list{
+.quick-list {
     display: flex;
     gap: 70px;
     /* justify-content: space-between; */
@@ -107,42 +112,109 @@ header{
 }
 
 
-.quick-list-image{
+.quick-list-image {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
-.quick-list-image-item{
+
+.quick-list-image-item {
     width: 250px;
 }
 
 
-.quick-list-detail{
+.quick-list-detail {
     display: flex;
     align-items: center;
 }
 
-.quick-list-title>h2{
+.quick-list-title>h2 {
     font-weight: 500;
     font-size: 2em;
     color: var(--tertiary-color)
 }
 
-.quick-list-description{
+.quick-list-description {
     color: var(--tertiary-color);
     margin: 25px 0;
 }
 
-.primary-color{
+.primary-color {
     color: var(--primary-color);
     font-weight: 700;
 }
 
-.orange-color{
+.orange-color {
     color: #FF900E;
     font-weight: 700;
 }
+
 /*===== quick list area ends  =====*/
+
+/*===== feature area starts  =====*/
+
+.feature-container {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.feature-title {
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.feature-detail p {
+    color: var(--tertiary-color);
+    line-height: 26px;
+}
+
+.feature-description {
+    margin: 25px 0;
+}
+
+.feature-item-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-item {
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    width: 90%;
+}
+.feature-item>h4{
+    margin-bottom: 10px;
+}
+
+.feature-image, .feature-detail {
+    width: 100%;
+}
+.feature-image>img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.floating-btn{
+    padding: 40PX;
+    background-color: #FF900E;
+    border-radius: 8px;
+    color: #FFFFFF;
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    left: 46%;
+}
+
+.floating-btn>h3{
+    font-size: 3em;
+}
+
+/*===== feature area ends  =====*/
 
 
 
@@ -155,18 +227,38 @@ header{
 /*===== responsive for mobile device =====*/
 
 @media only screen and (max-width: 576px) {
-    .container, .banner-detail, .quick-list-image-item {
+
+    .container,
+    .banner-detail,
+    .quick-list-image-item {
         width: 100%;
     }
-    .navber, .navber-items ul, .quick-list {
+
+    .navber,
+    .navber-items ul,
+    .quick-list,
+    .feature-container {
         flex-direction: column;
         gap: 40px;
     }
-    .quick-list-image{
+
+    .quick-list-image {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .quick-list-detail {
         text-align: center;
         padding: 0 20px;
+    }
+
+    .feature-detail p{
+        padding: 15px;
+    }
+    .feature-item{
+        width: 100%;
+    }
+    .floating-btn{
+        top: 102%;
+        left: 2%;
     }
 }
