@@ -54,7 +54,7 @@ header {
 
 .navber-title>h2 {
     font-weight: 700;
-    font-size: 35px;
+    font-size: 2em;
 }
 
 .navber-items ul {
@@ -76,7 +76,7 @@ header {
 
 .banner-title{
     font-weight: 700;
-font-size: 64px;
+    font-size: 3em;
 }
 
 .banner-detail{
@@ -93,3 +93,23 @@ font-size: 64px;
 }
 
 /*===== header area ends  =====*/
+
+
+
+
+
+
+
+
+
+/*===== responsive for mobile device =====*/
+
+@media only screen and (max-width: 576px) {
+    .container{
+        width: 100%;
+    }
+    .navber, .navber-items ul {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
