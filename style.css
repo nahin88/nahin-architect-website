@@ -114,7 +114,6 @@ header {
 .quick-list {
     display: flex;
     gap: 70px;
-    /* justify-content: space-between; */
     padding: 80px 0;
 }
 
@@ -246,15 +245,12 @@ header {
     transition: 1s;
     z-index: 1;
     position: relative;
-    /* animation: scaling 0.5s linear 0.1s infinite alternate; */
-    
 }
 
 .fact-item:hover .fact-item-hover{
     height: 100%;
     width: 100%;
     transition: height 1s, width 1s;
-    /* transition-delay: 5s; */
     animation: scaling 0.3s ease 0.1s infinite alternate;
 }
 
@@ -392,6 +388,8 @@ footer{
     .sponser-container,
     .feature-item,
     .client-description,
+    .client-info,
+    .client-info>p,
     .client {
         width: 100%;
     }
@@ -435,6 +433,10 @@ footer{
     }
     .fact-item:hover{
         transform: none;
+    }
+    .client-item{
+        width: 100%;
+        padding: 20px;
     }
     .sponser-container, .client{
         padding: 20px;
