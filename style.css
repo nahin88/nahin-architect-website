@@ -228,6 +228,7 @@ header {
     color: var(--tertiary-color);
     margin-top: 20px;
     width: 53%;
+    
 }
 
 .fact-container{
@@ -244,11 +245,39 @@ header {
     line-height: 29px;
     transition: 1s;
     z-index: 1;
+    position: relative;
+    /* animation: scaling 0.5s linear 0.1s infinite alternate; */
+    
 }
-.fact-item:hover{
+
+.fact-item:hover .fact-item-hover{
+    height: 100%;
+    width: 100%;
+    transition: height 1s, width 1s;
+    /* transition-delay: 5s; */
+    animation: scaling 0.3s ease 0.1s infinite alternate;
+}
+
+.fact-item-hover{
+    height: 0;
+    width: 0;
     background-color: #FF900E;
-    opacity: 0.5;
-    transform: rotate(360deg) scale(1.2);
+    border-radius: 8px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1; 
+}
+
+@keyframes scaling {
+    from{
+        background-color: #2c2b29;
+    
+    }
+    to{
+        background-color: #FF900E;
+       
+    }
 }
 
 
