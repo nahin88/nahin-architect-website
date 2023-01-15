@@ -46,7 +46,8 @@ footer{
 .navber-title>h2,
 .feature-title,
 .fact>h2,
-.sponser-container>h2 {
+.sponser-container>h2,
+.client-title {
     font-weight: 700;
     font-size: 2em;
     color: var(--primary-color);
@@ -55,6 +56,7 @@ footer{
 .banner-bottom>img,
 .quick-list-image-item>img,
 .feature-image>img,
+.client-author>img,
 .sponser-logo-item>img {
     width: 100%;
 }
@@ -262,9 +264,60 @@ header {
 
 /*===== fact area ends  =====*/
 
+/*===== client area ends  =====*/
+
+.client-description{ 
+    color: var(--tertiary-color);
+    margin: 20px 0;
+    width: 53%;
+}
+
+.client-container{
+    display: flex;
+    gap: 30px;
+}
+
+.client-item{
+    display: flex;
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 6%);
+    border-radius: 8px;
+    width: 90%;
+    gap: 30px;
+}
+
+.client-author{
+    height: 100px;
+    width: 100px;
+    
+}
+
+.client-author>img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.client-info{
+    width: 50%;
+}
+
+.client-info>p{
+    width: 300px;
+    color: var(--tertiary-color);
+    margin-bottom: 20px;
+}
+
+.client-info-designation{
+    color: #FF900E;
+}
+
+/*===== client area ends  =====*/
+
 /*===== sponser area starts  =====*/
 .sponser{
-    margin-bottom: 130px;
+    margin: 130px 0;
 }
 .sponser-container{
     text-align: center;
@@ -306,7 +359,11 @@ footer{
     .container,
     .banner-detail,
     .quick-list-image-item,
-    .sponser-container>p {
+    .sponser-container>p,
+    .sponser-container,
+    .feature-item,
+    .client-description,
+    .client {
         width: 100%;
     }
 
@@ -314,7 +371,9 @@ footer{
     .navber-items ul,
     .quick-list,
     .feature-container,
-    .fact-container {
+    .fact-container,
+    .client-container,
+    .client-item  {
         flex-direction: column;
         gap: 40px;
     }
@@ -323,7 +382,7 @@ footer{
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .quick-list-detail {
+    .quick-list-detail, .fact {
         text-align: center;
         padding: 0 20px;
     }
@@ -331,24 +390,24 @@ footer{
     .feature-detail p{
         padding: 15px;
     }
-    .feature-item{
+    /* .feature-item{
         width: 100%;
-    }
+    } */
     .floating-btn{
         position: static;
         border-radius: 0;
     }
 
-    .fact{
+    /* .fact{
         text-align: center;
-    }
+    } */
     .fact>p{
         width: 100%;
     }
     .fact-item:hover{
         transform: none;
     }
-    .sponser-container{
+    .sponser-container, .client{
         padding: 20px;
     }
     .sponser-logo-container{
