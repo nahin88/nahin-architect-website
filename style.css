@@ -521,7 +521,30 @@ footer{
         width: 100%;
     }
 
+    .navber{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .quick-list {
         flex-direction: column;
+    }
+
+    .quick-list-image{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .quick-list-detail, .fact {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .client-item{
+        flex-wrap: wrap;
+    }
+    .sponser-container, .client, .sponser-logo-container{
+        padding: 20px;
+    }
+    .sponser-logo-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
